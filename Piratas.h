@@ -26,5 +26,7 @@ class Piratas : public Seres
 
 	string getFuncion();
 	void setFuncion(string);
+
+	string getTipo();
 };
 #endif

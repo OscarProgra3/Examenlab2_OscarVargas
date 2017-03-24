@@ -17,5 +17,7 @@ class Logia : public Frutadeldiablo
 		
 		string getElemento();
 		void setElemento(string);
+
+		string getTipo();
 };
 #endif

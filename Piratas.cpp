@@ -34,3 +34,7 @@ void Piratas::setFuncion(string tfuncion)
 {
 		funcion=tfuncion;
 }
+string Piratas::getTipo()
+{
+	return "Paramecia"; 
+}

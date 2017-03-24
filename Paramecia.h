@@ -17,5 +17,7 @@ class Paramecia : public Frutadeldiablo
 		
 		string getDescripcion();
 		void setDescripcion(string);
+
+		string getTipo();
 };
 #endif

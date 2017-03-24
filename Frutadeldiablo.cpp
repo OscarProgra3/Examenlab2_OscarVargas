@@ -13,3 +13,8 @@ void Frutadeldiablo::setNombre(string tnombre)
 {
 	nombre=tnombre;
 }
+
+string Frutadeldiablo::getTipo(){
+
+	return "";
+}

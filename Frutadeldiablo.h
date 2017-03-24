@@ -17,6 +17,7 @@ class Frutadeldiablo
 		string getNombre();
 		void setNombre(string);
 
+		virtual string getTipo();
 
 };
 #endif

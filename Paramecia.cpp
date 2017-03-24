@@ -13,3 +13,10 @@ void Paramecia::setDescripcion(string tdescripcion)
 {
 	descripcion=tdescripcion;
 }
+
+//poli del papi
+
+string Paramecia::getTipo(){
+
+	return "Paramecia";
+}

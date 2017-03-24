@@ -6,7 +6,7 @@ Zoan::Zoan(string pnombre, string ptipo, string panimal) : Frutadeldiablo(pnombr
 	animal=panimal;
 }
 
-string Zoan::getTipo()
+string Zoan::getTipozoan()
 {
 	return tipo;
 }
@@ -22,4 +22,8 @@ string Zoan::getAnimal()
 string Zoan::setAnimal(string tanimal)
 {
 	animal=tanimal;
+}
+string Zoan::getTipo()
+{
+	return "Zoan"; 
 }

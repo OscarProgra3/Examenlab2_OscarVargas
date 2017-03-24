@@ -15,10 +15,12 @@ class Zoan : public Frutadeldiablo
 		Zoan();
 		Zoan(string,string,string);
 		
-		string getTipo();
+		string getTipozoan();
 		void setTipo(string);
 
 		string getAnimal();
 		string setAnimal(string);
+
+		string getTipo();
 };
 #endif
