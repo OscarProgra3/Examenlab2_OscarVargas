@@ -13,7 +13,6 @@ class Frutadeldiablo
 	public:
 		Frutadeldiablo();
 		Frutadeldiablo(string);
-		~Frutadeldiablo();
 	
 		string getNombre();
 		void setNombre(string);

@@ -14,7 +14,6 @@ class Logia : public Frutadeldiablo
 	public:
 		Logia();
 		Logia(string,string);
-		~Logia();
 		
 		string getElemento();
 		void setElemento(string);

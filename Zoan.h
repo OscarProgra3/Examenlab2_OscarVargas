@@ -14,11 +14,11 @@ class Zoan : public Frutadeldiablo
 	public:
 		Zoan();
 		Zoan(string,string,string);
-		~Zoan();
+		
+		string getTipo();
+		void setTipo(string);
 
-	string getTipo();
-	void setTipo(string);
-
-	string getAnimal();
-	string setAnimal(string);
+		string getAnimal();
+		string setAnimal(string);
 };
+#endif

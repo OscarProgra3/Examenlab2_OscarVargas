@@ -16,9 +16,8 @@ class Piratas : public Seres
 
 	public:
 		Piratas();
-		Piratas(string,int,string,Frutadiablo*,bool,bool,bool,string,string,string);
-		~Piratas();
-	
+		Piratas(string,int,string,Frutadeldiablo*,bool,bool,bool,string,string,string);
+		
 	string getOceano();
 	void setOceano(string);
 

@@ -1,7 +1,7 @@
 #include "Marina.h"
 
 
-Marina::Marina(string praza,int pedad,string pnombre,Frutadiablo* pfrutadiablo,bool phakiobservacion,bool phakiarmadura,bool phakirey, string pfechaingreso,string prango) : Seres(praza,pedad,pnombre,pfrutadiablo,phakiobservacion,phakiarmadura,phakirey)
+Marina::Marina(string praza,int pedad,string pnombre,Frutadeldiablo* pfrutadiablo,bool phakiobservacion,bool phakiarmadura,bool phakirey, string pfechaingreso,string prango) : Seres(praza,pedad,pnombre,pfrutadiablo,phakiobservacion,phakiarmadura,phakirey)
 {
 	fechaingreso=pfechaingreso;
 	rango=prango;

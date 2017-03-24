@@ -15,9 +15,8 @@ class Marina : public Seres
 
 	public:
 		Marina();
-		Marina(string,int,string,Frutadiablo*,bool,bool,bool,string,string);
-		~Marina();
-		
+		Marina(string,int,string,Frutadeldiablo*,bool,bool,bool,string,string);
+	
 	string getFechaingreso();
 	void setFechaingreso(string);
 

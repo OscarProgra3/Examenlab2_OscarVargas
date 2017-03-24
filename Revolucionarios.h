@@ -1,4 +1,4 @@
-#include "Seres"
+#include "Seres.h"
 
 #ifndef REVOLUCIONARIOS_H
 #define REVOLUCIONARIOS_H
@@ -14,9 +14,8 @@ class Revolucionarios : public Seres
 
 	public:
 		Revolucionarios();
-		Revolucionarios(string,int,string,Frutadiablo*,bool,bool,bool,string);
-		~Revolucionarios();
-	
+		Revolucionarios(string,int,string,Frutadeldiablo*,bool,bool,bool,string);
+		
 		string getFechaingreso();
 		void setFechaingreso(string);
 };

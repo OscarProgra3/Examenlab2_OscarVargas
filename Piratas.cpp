@@ -1,7 +1,7 @@
 #include "Piratas.h"
 
 
-Piratas::Pratas(string praza,int pedad,string pnombre,Frutadiablo* pfrutadiablo,bool phakiobservacion,bool phakiarmadura,bool phakirey,string poceano, string ptripulacion, string pfuncion ) : Seres(praza,pedad,pnombre, pfrutadiablo, phakiobservacion,phakiarmadura,phakirey)
+Piratas::Piratas(string praza,int pedad,string pnombre,Frutadeldiablo* pfrutadiablo,bool phakiobservacion,bool phakiarmadura,bool phakirey,string poceano, string ptripulacion, string pfuncion ) : Seres(praza,pedad,pnombre, pfrutadiablo, phakiobservacion,phakiarmadura,phakirey)
 {
 	oceano=poceano;
 	tripulacion=ptripulacion;

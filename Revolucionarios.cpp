@@ -1,6 +1,6 @@
 #include "Revolucionarios.h"
 
-Revolucionarios::Revolucionarios(string praza,int pedad,string pnombre,Frutadiablo* pfrutadiablo,bool phakiobservacion,bool phakiarmadura,bool phakirey,string pfechaingreso) : Seres(praza,pedad,pnombre, pfrutadiablo, phakiobservacion,phakiarmadura,phakirey)
+Revolucionarios::Revolucionarios(string praza,int pedad,string pnombre,Frutadeldiablo* pfrutadiablo,bool phakiobservacion,bool phakiarmadura,bool phakirey,string pfechaingreso) : Seres(praza,pedad,pnombre, pfrutadiablo, phakiobservacion,phakiarmadura,phakirey)
 {
 	fechaingreso=pfechaingreso;
 

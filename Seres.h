@@ -1,4 +1,5 @@
 #include <string>
+#include "Frutadeldiablo.h"
 
 #ifndef SERES_H
 #define SERES_H
@@ -21,14 +22,13 @@ class Seres
 
 	public:
 		Seres();
-		Seres(string,int,string,Frutadiablo*,bool,bool,bool);
-		~Seres();
+		Seres(string,int,string,Frutadeldiablo*,bool,bool,bool);
 		
 		string getRaza();
 		void setRaza(string);
 
-		int getRaza();
-		void setRaza(int);
+		int getEdad();
+		void setEdad(int);
 		
 		string getNombre();
 		void setNombre(string);

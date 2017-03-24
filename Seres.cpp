@@ -1,14 +1,14 @@
-#include "Seres"
+#include "Seres.h"
 
-Seres::Seres(string praza,int pedad,string pnombre,Frutadiablo* pfrutadiablo,bool phakiobservacion,bool phakiarmadura,bool phakirey)
+Seres::Seres(string praza,int pedad,string pnombre,Frutadeldiablo* pfrutadiablo,bool phakiobservacion,bool phakiarmadura,bool phakirey)
 {
-		raza=praza;
-		edad=pedad;
-		nombre=pnombre;
-		frutad=pfrutadiablo;
-		hakiobservacion=phakiobservacion;
-		hakiarmadura=phakiarmadura;
-		hakirey=phakirey;
+	raza=praza;
+	edad=pedad;
+	nombre=pnombre;
+	frutad=pfrutadiablo;
+	hakiobservacion=phakiobservacion;
+	hakiarmadura=phakiarmadura;
+	hakirey=phakirey;
 
 }
 
@@ -16,7 +16,7 @@ string Seres::getRaza()
 {
 	return raza;
 }
-void setRaza(string traza)
+void Seres::setRaza(string traza)
 {
 	raza=traza;
 }

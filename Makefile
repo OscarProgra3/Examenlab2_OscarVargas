@@ -23,7 +23,7 @@ Paramecia.o:	Paramecia.cpp Paramecia.h Frutadeldiablo.h
 	g++ -c Paramecia.cpp
 
 Zoan.o:	Zoan.cpp Zoan.h Frutadeldiablo.h
-	g++ -c Marina.cpp
+	g++ -c Zoan.cpp
 
 Logia.o:	Logia.cpp Logia.h Frutadeldiablo.h
 	g++ -c Logia.cpp
