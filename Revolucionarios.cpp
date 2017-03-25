@@ -14,3 +14,8 @@ void Revolucionarios::setFechaingreso(string tfechaingreso)
 {
 	fechaingreso=tfechaingreso;
 }
+
+string Revolucionarios::getTiposer()
+{
+	return "Revolucionarios";
+}

@@ -45,7 +45,7 @@ class Seres
 		bool getHakirey();
 		void setHakirey(bool);
 
-
+		virtual string getTiposer();
 
 
 };

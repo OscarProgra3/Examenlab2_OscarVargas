@@ -18,5 +18,7 @@ class Revolucionarios : public Seres
 		
 		string getFechaingreso();
 		void setFechaingreso(string);
+
+		string getTiposer();
 };
 #endif

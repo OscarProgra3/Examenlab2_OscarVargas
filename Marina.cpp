@@ -26,3 +26,7 @@ void Marina::setRango(string trango)
 {
 	rango=trango;
 }
+string Marina::getTiposer()
+{
+	return "Marina"; 
+}

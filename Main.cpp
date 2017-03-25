@@ -3,6 +3,11 @@
 #include <iostream>
 #include <fstream>
 
+#include <sstream>
+
+
+#include <fstream> //PARA FICHEROS
+
 #include "Seres.h"
 #include "Frutadeldiablo.h"
 #include "Marina.h"
@@ -14,6 +19,7 @@
 
 using namespace std;
 void listarFrutas(vector <Frutadeldiablo*> listaFrutasT);
+void imprimirSer(Seres* elser);
 
 int main()
 {
@@ -117,14 +123,16 @@ int main()
 					cin>>edad;
 					
 					listarFrutas(listafrutasdiablo);
+					Frutadeldiablo* estafruta;
 					int frutaescogida;
 					cout<<endl<<"¿numero de fruta a agregar?"<<endl;
 					cin>>frutaescogida;
+					estafruta=listafrutasdiablo.at(frutaescogida);
 					listafrutasdiablo.erase(listafrutasdiablo.begin() + frutaescogida);
 
 					bool hakiobservacion=false;
 					int validacion1=0;
-					while(validacion1!=1)
+					while(validacion1==1)
 					{
 						cout<<endl<<"¿Tiene haki de observacion?(S/N): ";
 						if (hakiobservacion=='S' || hakiobservacion=='s')
@@ -135,12 +143,14 @@ int main()
 					}
 
 
+					char hakiar='n';
 					bool hakiarmadura=false;
 					int validacion2=0;
-					while(validacion2!=1)
+					while(validacion2==1)
 					{
 						cout<<endl<<"¿Tiene haki dearmadura?(S/N): ";
-						if (hakiarmadura=='S' || hakiarmadura=='s')
+						cin>>hakiar;
+						if (hakiar=='S' || hakiar=='s')
 						{
 							hakiarmadura=true;
 							validacion2=1;
@@ -149,13 +159,14 @@ int main()
 
 
 					bool hakirey=false;
+					char hakir='n';
 					int validacion3=0;
-					while(validacion3!=1)
+					while(validacion3==1)
 					{
 						cout<<endl<<"¿Tiene haki de observacion?(S/N): ";
-						if (hakirey=='S' || hakirey=='s')
+						if (hakir=='S' || hakir=='s')
 						{
-							hakiobservacion=true;
+							hakirey=true;
 							validacion3=1;
 						}
 					}
@@ -165,13 +176,136 @@ int main()
 					while(opcser!=4)
 					{
 
-						cout<<endl<<"¿Que tipo de fruta desea?\n1.-Paramecia\n2.-Zoan\n3.-Logia\n4.-Salir\nIngrese su opcion: ";
+						cout<<endl<<"¿Que tipo de ser desea?\n1.-Marina\n2.-Pirata\n3.-Revolucionario\n4.-Salir\nIngrese su opcion: ";
 						cin>>opcser;
 
-						if (opcser==1)
+						if (opcser==1)//MARINA
 						{
-							/* code */
+							string fechain;
+							cout<<endl<<"Ingrese fecha de ingreso: ";
+							cin>>fechain;
+
+							string tiporango="";
+							int opcrango=9;
+							while(opcrango!=5)
+							{
+								cout<<endl<<"Tipo de Zoan\n1.-Cadete\n2.-Teniente\n3.-Vicealmirante\n4.-almirante de tropa\n5.-Salir\nIngrese el tipo: ";
+								cin>>opcrango;
+													
+								if (opcrango==1)
+								{
+									tiporango="Cadete";	
+									opcrango=5;
+								}
+								if (opcrango==2)
+								{
+									tiporango=="Teniente";
+									opcrango=5;
+								}
+								if (opcrango==3)
+								{
+									tiporango=="Vicealmirante";
+									opcrango=5;
+								}
+								if (opcrango==4)
+								{
+									tiporango=="almirante de tropa";
+									opcrango=5;	
+								}
+							}
+
+							listaseres.push_back(new Marina(raza,edad,nombre,estafruta,hakiobservacion,hakiarmadura,hakirey,fechain,tiporango));
+							
+							Seres* printser;
+					
+							int lol=listaseres.size();
+							printser=listaseres.at(lol-1);
+							imprimirSer(printser);
+
+							opcser=4;
+
+						}//FIN MARINA
+						if (opcser==2)//PIRATAS
+						{
+							
+							string tipoceano;
+							int opcoceano=9;
+							while(opcoceano!=8)
+							{
+								cout<<endl<<"Tipo de Zoan\n1.-East\n2.-West\n3.-South\n4.-North\n5.-blue\n6.-Grand Line\n7.-New world\n8.-Salir\nIngrese el tipo: ";
+								cin>>opcoceano;
+													
+								if (opcoceano==1)
+								{
+									tipoceano="East";
+									opcoceano=8;
+								}
+								if (opcoceano==2)
+								{
+									tipoceano="West";
+									opcoceano=8;
+								}
+								if (opcoceano==3)
+								{
+									tipoceano="South";
+									opcoceano=8;
+								}
+								if (opcoceano==4)
+								{
+									tipoceano="North";
+									opcoceano=8;	
+								}
+								if (opcoceano==5)
+								{
+									tipoceano="blue";
+									opcoceano=8;	
+								}
+								if (opcoceano==6)
+								{
+									tipoceano="Grand line";
+									opcoceano=8;	
+								}
+								if (opcoceano==7)
+								{
+									tipoceano="New World";
+									opcoceano=8;	
+								}
+							}
+
+							string tripulacion;
+							cout<<"ingrese tripulacion: ";
+							cin>>tripulacion;
+							string funcion;
+							cout<<"ingrese funcion: ";
+							cin>>funcion;
+
+
+							listaseres.push_back(new Piratas(raza,edad,nombre,estafruta,hakiobservacion,hakiarmadura,hakirey,tipoceano,tripulacion,funcion));
+							
+							Seres* printser;
+					
+							int lol=listaseres.size();
+							printser=listaseres.at(lol-1);
+							imprimirSer(printser);
+
+
+						}//FIN PIRATAS
+						if (opcser==3)
+						{
+							string fechaing;
+							cout<<"ingrese fechaingreso: ";
+							cin>>fechaing;
+
+
+							listaseres.push_back(new Revolucionarios(raza,edad,nombre,estafruta,hakiobservacion,hakiarmadura,hakirey,fechaing));
+							
+							Seres* printser;
+					
+							int lol=listaseres.size();
+							printser=listaseres.at(lol-1);
+							imprimirSer(printser);
 						}
+
 					}
 
 				}//fin de agregar seres
@@ -198,4 +332,69 @@ void listarFrutas(vector <Frutadeldiablo*> listaFrutasT)
 			
 		cout << "-------------------------------------------------------" << endl;
 	}
+}
+
+void imprimirSer(Seres* elser)
+{
+	
+	ofstream  salida;
+	stringstream stm;
+	string fichero;
+
+	stm << "./Log_Seres/" << elser->getNombre()<< ".log";
+	fichero = stm.str();
+	salida.open(fichero.c_str());
+	salida << "-------------SER-----------" << endl;
+	salida << "---------------------------" << endl;
+	salida << "Nombre: "<<elser->getNombre()<< endl;
+	salida << "Raza: "<<elser->getRaza()<< endl;
+	salida << "Edad"<<elser->getEdad()<< endl;
+	salida << "Nombre: "<<elser->getNombre()<< endl;
+	salida << "Fruta: "<<elser->getFrutadiablo()->getNombre()<< endl;
+	bool hakio=elser->getHakiobservacion();
+	if (hakio==true)
+	{
+		salida << "hakiobservacion: Si"<< endl;
+	}else if (hakio==false)
+	{
+		salida << "hakiobservacion: No"<< endl;
+	}
+
+	bool hakia=elser->getHakiarmadura();
+	if (hakia==true)
+	{
+		salida << "hakiarmadura: Si"<< endl;
+	}else if (hakia==false)
+	{
+		salida << "hakiarmadura: No"<< endl;
+	}
+	bool hakir=elser->getHakirey();
+	if (hakir==true)
+	{
+		salida << "hakiRey: Si"<< endl;
+	}else if (hakir==false)
+	{
+		salida << "hakiRey: No"<< endl;
+	}
+
+	if (elser->getTiposer()=="Marina")
+	{
+		salida<<"tipo de ser Marina"<<endl;
+	}else if (elser->getTiposer()=="Pirata")
+	{
+		salida<<"tipo ser Pirata"<<endl;
+
+
+	}else if (elser->getTiposer()=="Revolucionrios")
+	{
+		salida<<"tipo ser Revolucionarios"<<endl;
+	//	salida<<"Fecha de ingreso: "<<elser->(Revolucionarios)getFechaingreso()<<endl;
+	}
+
+
+	
+	
+	salida << "---------------------------" << endl;
+	salida << "---------------------------" << endl;
+	salida.close();
 }

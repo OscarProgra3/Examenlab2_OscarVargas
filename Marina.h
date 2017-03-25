@@ -22,5 +22,8 @@ class Marina : public Seres
 
 	string setRango();
 	void setRango(string);
+
+	string getTiposer();
+
 };
 #endif

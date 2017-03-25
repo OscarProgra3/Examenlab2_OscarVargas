@@ -21,6 +21,14 @@ void Seres::setRaza(string traza)
 	raza=traza;
 }
 
+int Seres::getEdad()
+{
+	return edad;
+}
+void Seres::setEdad(int tedad)
+{
+	edad=tedad;
+}
 		
 string Seres::getNombre()
 {
@@ -65,4 +73,8 @@ bool Seres::getHakirey()
 void Seres::setHakirey(bool thakirey)
 {
 	hakirey=thakirey;
+}
+string Seres::getTiposer(){
+
+	return "";
 }
